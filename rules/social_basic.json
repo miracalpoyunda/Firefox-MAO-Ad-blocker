@@ -1,0 +1,5 @@
+[
+  {"id": 3001, "priority": 1, "action": {"type": "block"}, "condition": {"urlFilter": "||connect.facebook.net^", "resourceTypes": ["script", "sub_frame"]}},
+  {"id": 3002, "priority": 1, "action": {"type": "block"}, "condition": {"urlFilter": "||platform.twitter.com^", "resourceTypes": ["script", "sub_frame"]}},
+  {"id": 3003, "priority": 1, "action": {"type": "block"}, "condition": {"urlFilter": "||platform.linkedin.com^", "resourceTypes": ["script", "sub_frame"]}}
+]
