@@ -1,0 +1,8 @@
+[
+  {"id": 1001, "priority": 1, "action": {"type": "block"}, "condition": {"urlFilter": "||doubleclick.net^", "resourceTypes": ["script", "image", "sub_frame", "xmlhttprequest", "media"]}},
+  {"id": 1002, "priority": 1, "action": {"type": "block"}, "condition": {"urlFilter": "||googlesyndication.com^", "resourceTypes": ["script", "image", "sub_frame", "xmlhttprequest"]}},
+  {"id": 1003, "priority": 1, "action": {"type": "block"}, "condition": {"urlFilter": "||googleadservices.com^", "resourceTypes": ["script", "image", "sub_frame", "xmlhttprequest"]}},
+  {"id": 1004, "priority": 1, "action": {"type": "block"}, "condition": {"urlFilter": "||adservice.google.com^", "resourceTypes": ["script", "image", "sub_frame", "xmlhttprequest"]}},
+  {"id": 1005, "priority": 1, "action": {"type": "block"}, "condition": {"urlFilter": "||adsrvr.org^", "resourceTypes": ["script", "image", "sub_frame", "xmlhttprequest"]}},
+  {"id": 1006, "priority": 1, "action": {"type": "block"}, "condition": {"urlFilter": "||adnxs.com^", "resourceTypes": ["script", "image", "sub_frame", "xmlhttprequest"]}}
+]
