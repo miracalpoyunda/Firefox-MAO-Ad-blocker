@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>MAO AdBlocker</title>
+  <style>
+    body { width: min(380px, 100vw); max-width: 100vw; margin: 0; font-family: Arial, sans-serif; background: #111827; color: #f9fafb; }
+    .wrap { padding: 16px; }
+    h1 { font-size: 19px; margin: 0 0 14px; }
+    h2 { font-size: 14px; margin: 18px 0 8px; }
+    label { display: flex; gap: 9px; align-items: center; padding: 9px 0; cursor: pointer; line-height: 1.3; }
+    input { accent-color: #60a5fa; }
+    .card { background: #1f2937; border: 1px solid #374151; border-radius: 10px; padding: 10px 12px; }
+    .small { color: #9ca3af; font-size: 12px; line-height: 1.45; }
+    button { width: 100%; border: 0; border-radius: 9px; padding: 10px; margin-top: 12px; cursor: pointer; background: #2563eb; color: white; font-weight: 700; }
+    .secondary { background: #374151; }
+    #status, #cookieStatus { margin-top: 10px; font-size: 12px; min-height: 16px; }
+    #mobileNotice { display:none; }
+    @media (max-width: 420px) { body { width: 100%; } .wrap { padding: 12px; } }
+    .site { display:flex; gap:8px; align-items:center; margin-top:7px; }
+    .site input[type=text] { flex:1; width:auto; background:#111827; border:1px solid #4b5563; border-radius:7px; padding:8px; color:white; }
+    .danger { background:#7f1d1d; width:auto; padding:7px 9px; margin:0; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>MAO AdBlocker</h1>
+
+    <div class="card">
+      <h2>1. Reklam engelleyicileri / filtreler</h2>
+      <label><input type="checkbox" id="ads"> Temel reklam filtresi</label>
+      <label><input type="checkbox" id="trackers"> İzleyici filtresi</label>
+      <label><input type="checkbox" id="social"> Sosyal medya izleme filtresi</label>
+      <div class="small">Birden fazla filtreyi aynı anda seçebilirsin.</div>
+    </div>
+
+    <div class="card" style="margin-top:12px;">
+      <h2>2. Site seçenekleri</h2>
+      <label><input type="checkbox" id="googleServices"> Google hizmetlerinde reklam filtrelerini kapat</label>
+      <div class="small">YouTube, Drive, Docs, Gmail, Meet ve Google alanlarını birlikte yönetir.</div>
+      <div class="site">
+        <input id="domain" type="text" placeholder="ornek.com">
+        <button id="add" type="button">Ekle</button>
+      </div>
+      <div id="sites"></div>
+    </div>
+
+    <div class="card" style="margin-top:12px;">
+      <h2>3. Üçüncü taraf çerezleri</h2>
+      <label><input type="checkbox" id="thirdPartyCookies"> <b>Tüm sitelerde</b> üçüncü taraf çerezlerini engelle</label>
+      <div class="small">Bu seçenek Chrome'un gizlilik ayarını kullanır ve üçüncü taraf sitelerin çerez ayarlamasını engeller.</div>
+      <button id="clearCookies" class="secondary" type="button">Tüm kayıtlı çerezleri temizle</button>
+      <div id="mobileNotice" class="small"></div>
+      <div id="cookieStatus"></div>
+    </div>
+
+    <button id="save">Kaydet ve uygula</button>
+    <div id="status"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+{
+  "manifest_version": 3,
+  "name": "MAO AdBlocker",
+  "version": "1.1.0",
+  "description": "Seçilebilir reklam filtreleri ve üçüncü taraf çerez gizlilik ayarları sunan reklam engelleyici.",
+  "permissions": [
+    "storage",
+    "privacy",
+    "browsingData",
+    "declarativeNetRequest"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "mao-adblocker@miracalpoyunda",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    },
+    "gecko_android": {}
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "action": {
+    "default_title": "MAO AdBlocker",
+    "default_popup": "popup.html"
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ads_basic",
+        "enabled": true,
+        "path": "rules/ads_basic.json"
+      },
+      {
+        "id": "trackers_basic",
+        "enabled": false,
+        "path": "rules/trackers_basic.json"
+      },
+      {
+        "id": "social_basic",
+        "enabled": false,
+        "path": "rules/social_basic.json"
+      }
+    ]
+  }
+}
